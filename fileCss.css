@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.overLayBlack{
+    background-color: #1b1313d4;
+    width: 100%;
+    height: 100%;
+}
+.backImg{
+    background-image: url("images/bg1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    perspective: 600px;
+    transition: all .10s ease;
+}
+.containner{
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    /* background: firebrick; */
+    margin: auto;
+}
+.containner .contImag{
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #080; */
+    background-image: url("images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 70%;
+    transition: all .6s ease-in-out;
+}
+.containner .contImag .overLayWhite{
+    background: #ffffff1a;
+    width: 100%;
+    height: 100%;
+}
+.containner .contImag .icon.fst,
+.containner .contImag .icon.snd{
+    float: left;
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.containner .contImag .icon.snd{
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.containner .contImag .icon.fst span,
+.containner .contImag .icon.snd span{
+    background-color: #ddd;
+    opacity: 0.5;
+    width: 10%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+    margin: 0 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 50px;
+}
+.containner .contImag .icon.snd span{
+    margin: 0 20px 0 0;
+    position: absolute;
+    right: 0;
+}
+.containner .contImag .icon.fst span:hover,
+.containner .contImag .icon.snd span:hover{
+    opacity: 1;
+}
+.containner .contImag .contBulltes{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px;
+    background: linear-gradient( black, transparent);
+    transform: rotateZ(180deg);
+}
+.containner .contImag .contBulltes .con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.containner .contImag .contBulltes span{
+   border: 2px solid #8bc34a;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.containner .contImag .contBulltes span:hover{
+    background-color: #8bc34a;
+}
+.containner .contImag .contBulltes span.active{
+    background-color: #8bc34a;
+}
+
+
+.containner .contImag .icon.fst span.noDrop,
+.containner .contImag .icon.snd span.noDrop{
+    display: none !important;
+}
+/* star media query  */
+
+/* -------------------- */
+@media(max-width: 420px){
+
+    .containner .contImag {
+        background-size: 100%;
+    }
+    .containner .contImag .overLayWhite {
+        background: #ffffff1a;
+        width: 100%;
+        height: 100%;
+    }
+    .containner .contImag {
+
+    }
+    .containner .contImag{
+        width: 100%;
+        height: 100vh;
+    }
+    .containner .contImag .icon.fst,
+    .containner .contImag .icon.snd{
+        height: 5%;
+    }
+    .containner .contImag .icon.fst span,
+    .containner .contImag .icon.snd span {
+        width: 25%;
+        line-height: 35px;
+    }
+}
+/* -------------------- */
+
+/* -------------------- */
+@media(min-width: 421px) and (max-width: 660px){
+
+    .containner {
+        position: relative;
+        height: 58vh;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%)
+    }   
+    .containner .contImag .icon.fst,
+    .containner .contImag .icon.snd {
+        height: 10%;
+    }
+    .containner .contImag .icon.fst span,
+    .containner .contImag .icon.snd span {
+        width: 20%;
+        line-height: 30px !important;
+    }
+
+}
+@media(min-width: 661px){
+
+    .containner{
+        width: 100%;
+    } 
+
+}
+/* -------------------- */
+/* end media qurry */
